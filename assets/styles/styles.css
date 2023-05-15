@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+main,
+div,
+p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Raleway', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #dddbff;
+}
+
+body {
+  background: #0c122c;
+  background-image: url("./../img/bg-mobile.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 130px 25px;
+}
+
+.block1 {
+  width: 100%;
+  max-width: 400px;
+  padding: 35px;
+  border-radius: 8px 100px 8px 8px;
+  background-color: #1d2c67;
+}
+
+.block1 #logo {
+  margin-top: 5px;
+}
+
+.block1 .icons {
+  display: flex;
+  flex-direction: row;
+  margin: 30px 0 5px 0;
+}
+
+.block1 .icons .img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  margin-right: 18px;
+  background-color: #0c122c;
+  border-radius: 8px;
+}
+
+.block1 .icons img {
+  width: 25px;
+  height: auto;
+}
+
+.block2 {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  margin-top: 15px;
+  padding: 35px;
+  background-color: #1d2c67;
+  border-radius: 8px;
+}
+
+.block2 .sticker {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  height: 50px;
+  width: max-content;
+  transform: translateY(50%) translateX(-50%);
+  padding: 35px 23px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background-color: #FFF;
+}
+
+.block2 .sticker .sticker-paragraph {
+  display: flex;
+  align-items: center;
+  color: #0c122c;
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.block2 .sticker .sticker-paragraph span {
+  display: inline-block;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 12px;
+  color: #848794;
+}
+
+.block2 p {
+  color: #dddbff;
+}
+
+.block2 p span {
+  font-weight: 700;
+}
+
+.block2 .progress {
+  margin-top: 20px;
+  padding: 3px;
+  width: 100%;
+  height: 20px;
+  border-radius: 50px;
+  background: #141e48;
+}
+
+.block2 .progress .progress-bar {
+  position: relative;
+  width: 81.5%;
+  height: 100%;
+  border-radius: 50px;
+  background: linear-gradient(20deg, #ffa399, #ff4d97);
+}
+
+.block2 .progress .progress-bar::after {
+  position: absolute;
+  content: '';
+  right: 2px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 8px;
+  height: 8px;
+  border: 2px solid transparent;
+  border-radius: 50px;
+  background: #FFF;
+  z-index: 1;
+}
+
+.block2 .scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.block2 .scale p {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-image: url("./../img/bg-desktop.png");
+    background-position: bottom 0 right 0;
+    background-size: contain;
+  }
+  .main {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+  .block1 {
+    width: 350px;
+    max-width: initial;
+  }
+  .block2 {
+    width: 550px;
+    max-width: initial;
+    margin-top: 35px;
+    margin-left: 30px;
+  }
+  .block2 .sticker {
+    left: initial;
+    bottom: initial;
+    right: -50px;
+    top: -50%;
+  }
+  .block2 .sticker::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 40px;
+    right: 0;
+    height: 2px;
+    background-color: transparent;
+    border-right: 50px solid #FFF;
+    border-bottom: 50px solid transparent;
+    border-left: 50px solid transparent;
+  }
+}
